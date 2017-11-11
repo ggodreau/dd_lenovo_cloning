@@ -1,5 +1,5 @@
 # BACKING UP LENOVO NOTES
-======
+
 1. lenovo has 3 partitions: 0 is boot (100MB), 1 is os (500GB) and 2 is storage (1.5TB)
 2. lenovo has two drives, the 24GB SSD is not used and not needed for the machine (win8 cache only)
 3. shut down the machine and place usb ubuntu in usb slot
