@@ -61,3 +61,16 @@ zzOverview: This seeks to copy two partitions: a source boot and os partition (w
 17. OPTION 2 PART 1: DIRECT PARTITION COPY METHOD, NO INTERMEDIARY GZ FILE: on SOURCE machine, read in partition from sda1 from local machine and place on target machine DIRECT TO TARGET BOOT PARTITION with NO intermediary .gz file
 
     `$ sudo dd if=/dev/sda2 | ssh lubuntu@192.168.8.8 dd of=/dev/sdb2`
+
+18. When completed, you may need to re-write the bootloader for windows as it appears a GPT boot will ruin a legacy boot partition. Download the windows USB rescue utility here: https://www.microsoft.com/en-gb/software-download/windows10ISO
+
+19 After booting the USB recovery utility from step 18, run the following commands:
+
+    ```
+    bootrec /FixMbr
+    bootrec /FixBoot
+    bootrec /ScanOs
+    bootrec /RebuildBcd
+    ```
+
+Note that some of the above commands may fail, however this should not affect the result.
