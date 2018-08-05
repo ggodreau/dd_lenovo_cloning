@@ -1,9 +1,7 @@
 # BACKING UP LENOVO NOTES
 
-```
-zzOverview: This seeks to copy two partitions: a source boot and os partition (windows) from source machine to target machine, both running lubuntu pendrive environments. The transfer is done via SSH. One method is to gzip the partition contents in transit, yielding a target .gz file for the boot and os partitions. The other method is to transfer partition contents directly from source to target with no .gz intermediary file. The latter is untested on large files at time of writing.
-```
-
+zzOverview: This seeks to copy two partitions: a source boot and os partition (windows) from source machine to target machine, both running lubuntu pendrive environments. The transfer is done via SSH. One method is to gzip the partition contents in transit, yielding a target .gz file for the boot and os partitions. The other method is to transfer partition contents directly from source to target with no .gz intermediary file. The latter is untested on large files at time of writing. More info can be found [here](https://unix.stackexchange.com/questions/132797/how-to-dd-a-remote-disk-using-ssh-on-local-machine-and-save-to-a-local-disk).
+---
 
 1. lenovo has 3 partitions: 0 is boot (100MB), 1 is os (500GB) and 2 is storage (1.5TB)
 2. lenovo has two drives, the 24GB SSD is not used and not needed for the machine (win8 cache only)
